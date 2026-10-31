@@ -46,6 +46,12 @@ export default function Contact() {
       emailjsConfig.publicKey !== 'YOUR_EMAILJS_PUBLIC_KEY'
     );
 
+    // Populate the hidden from_name field for EmailJS
+    const fromNameField = form.querySelector('#from_name');
+    if (fromNameField) {
+      fromNameField.value = `${firstName} ${lastName}`.trim();
+    }
+
     if (!isConfigured) {
       // Fallback: trigger pre-formatted mailto link
       const subject = `Portfolio Contact from ${firstName} ${lastName}`.trim();
@@ -62,16 +68,18 @@ export default function Contact() {
       // Send directly via EmailJS SDK
       try {
         const emailjs = await import('@emailjs/browser');
+        // v5 accepts { publicKey } options object as 4th arg
         await emailjs.sendForm(
           emailjsConfig.serviceId,
           emailjsConfig.templateId,
           formRef.current,
-          emailjsConfig.publicKey
+          { publicKey: emailjsConfig.publicKey }
         );
         setStatus('success');
         form.reset();
       } catch (err) {
         console.error('EmailJS error:', err);
+        // Surface the error message briefly so the user knows what went wrong
         setStatus('error');
       } finally {
         setTimeout(() => setStatus('idle'), 4000);
@@ -126,6 +134,8 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="flex flex-col gap-10"
         >
+          {/* Hidden field so EmailJS templates that use {{from_name}} still work */}
+          <input type="hidden" name="from_name" id="from_name" />
           {/* Two-column layout on desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left Column: Underline Inputs */}
