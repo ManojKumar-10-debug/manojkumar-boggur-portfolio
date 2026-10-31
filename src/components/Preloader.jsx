@@ -5,6 +5,7 @@ import { personalInfo } from '../data/portfolioData';
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isFilled, setIsFilled] = useState(false);
 
   useEffect(() => {
     // Dismiss preloader after 2200ms
@@ -31,17 +32,18 @@ export default function Preloader() {
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ duration: 0.4 }}
           >
-            {/* Background faint text copy */}
-            <div className="text-red-900/30">
+            {/* Background faint text copy (with bottom padding for descenders) */}
+            <div className="text-red-900/30 leading-normal pb-4 md:pb-6">
               {personalInfo.brandName}.
             </div>
 
             {/* Foreground white text with upward water-fill clip-path animation */}
             <motion.div
-              className="absolute inset-0 text-white"
+              className="absolute inset-0 text-white leading-normal pb-4 md:pb-6"
               initial={{ clipPath: 'inset(100% 0 0 0)' }}
-              animate={{ clipPath: 'inset(0% 0 0 0)' }}
+              animate={{ clipPath: isFilled ? 'none' : 'inset(0% 0 -25% 0)' }}
               transition={{ duration: 1.6, ease: 'easeInOut', delay: 0.2 }}
+              onAnimationComplete={() => setIsFilled(true)}
             >
               {personalInfo.brandName}
               <span className="text-black">.</span>
