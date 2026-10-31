@@ -1,16 +1,66 @@
-# React + Vite
+# Manojkumar Boggur — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A high-performance, single-page developer portfolio showcasing full-stack web applications, RESTful microservices, and modern UI engineering.
 
-Currently, two official plugins are available:
+**Live site:** [https://YOUR-SITE-URL/](https://YOUR-SITE-URL/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built during the placement training program at [TAP Academy](https://thetapacademy.com/) (full-stack development, AI and augmented reality training).
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the Oxlint configuration
+- **Framework & Runtime:** React 19, Vite
+- **Styling:** Tailwind CSS 4
+- **Animations & Effects:** Framer Motion, AOS (Animate On Scroll), WebGL (fluid splash cursor)
+- **Communications:** EmailJS (`@emailjs/browser`)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+## 💻 Run Locally
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/ManojKumar-10-debug/my-portfolio.git
+cd my-portfolio
+npm install
+```
+
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file in the project root to configure EmailJS:
+
+```env
+VITE_EMAILJS_SERVICE_ID=
+VITE_EMAILJS_TEMPLATE_ID=
+VITE_EMAILJS_PUBLIC_KEY=
+```
+
+*(If these variables are omitted, the contact form automatically falls back to an optimized pre-filled email client mailto draft.)*
+
+---
+
+## 📜 Credits
+
+Built during the placement training program at [TAP Academy](https://thetapacademy.com/) (full-stack development, AI and augmented reality training).
