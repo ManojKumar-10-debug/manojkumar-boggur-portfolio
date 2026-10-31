@@ -276,7 +276,7 @@ export default function Services() {
         {/* ── Hand-written End Note ──────────────────────────────────────── */}
         {skillsContent.endText && (
           <div
-            className="hidden md:block absolute top-[1250px] left-[60%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6 select-none"
+            className="mt-12 text-center md:text-left md:mt-0 md:absolute md:top-[1250px] md:left-[60%] font-['Caveat',cursive] text-2xl md:text-3xl text-gray-700 md:rotate-6 select-none"
             aria-hidden="true"
           >
             {skillsContent.endText}

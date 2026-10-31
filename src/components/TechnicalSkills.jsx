@@ -35,7 +35,7 @@ export default function TechnicalSkills() {
   return (
     <section
       id="skills"
-      className="bg-[#0a0a0a] pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"
+      className="bg-[#0a0a0a] pt-20 pb-24 md:pt-24 md:pb-28 px-5 sm:px-6 md:px-12 relative overflow-hidden"
     >
       {/* ── Background red ambient glows ────────────────────────────────── */}
       <div className="absolute -top-20 -left-20 w-96 h-96 bg-red-600/10 rounded-full blur-[120px] pointer-events-none" />
@@ -43,11 +43,11 @@ export default function TechnicalSkills() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* ── Header ────────────────────────────────────────────────────── */}
-        <div data-aos="fade-up" className="text-center max-w-3xl mx-auto mb-16">
+        <div data-aos="fade-up" className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-[#ff2a2a] text-xs font-semibold uppercase tracking-widest mb-4">
             Technical Stack
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
             My Skillset
           </h2>
           <p className="text-white/50 text-base md:text-lg max-w-xl mx-auto">

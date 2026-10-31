@@ -15,13 +15,13 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-[#ff2a2a] pt-20 pb-40 px-6 md:px-12 relative overflow-hidden"
+      className="bg-[#ff2a2a] pt-16 pb-32 md:pt-20 md:pb-40 px-5 sm:px-6 md:px-12 relative overflow-hidden"
     >
       {/* ── Decorative 4-point star — top right ────────────────────────── */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="absolute top-10 right-10 w-16 h-16 fill-black opacity-30 animate-pulse"
+        className="absolute top-8 right-6 md:top-10 md:right-10 w-10 h-10 md:w-16 md:h-16 fill-black opacity-30 animate-pulse"
         aria-hidden="true"
       >
         <path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z" />
@@ -31,7 +31,7 @@ export default function About() {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="absolute bottom-24 left-8 w-10 h-10 fill-black opacity-30 animate-pulse"
+        className="absolute bottom-20 left-6 md:bottom-24 md:left-8 w-8 h-8 md:w-10 md:h-10 fill-black opacity-30 animate-pulse"
         style={{ animationDelay: '1s' }}
         aria-hidden="true"
       >
@@ -39,28 +39,28 @@ export default function About() {
       </svg>
 
       {/* ── Inner layout ─────────────────────────────────────────────────── */}
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start">
         {/* ── LEFT — ID badge on a lanyard with 3D Flip ─────────────────── */}
-        <div className="md:w-[350px] shrink-0 flex flex-col items-center">
+        <div className="w-full md:w-[350px] shrink-0 flex flex-col items-center">
           <motion.div
-            className="relative flex flex-col items-center pt-32 w-full max-w-[280px]"
+            className="relative flex flex-col items-center pt-20 md:pt-32 w-full max-w-[260px] sm:max-w-[280px]"
             initial={{ y: -300, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ type: 'spring', stiffness: 110, damping: 9, mass: 1.1 }}
           >
             {/* Lanyard string */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-40 bg-black rounded-full z-0" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2.5 md:w-3 h-28 md:h-40 bg-black rounded-full z-0" />
 
             {/* Metal clip rectangle */}
-            <div className="relative z-10 w-8 h-5 bg-gray-500 rounded-sm shadow-inner mb-1" />
+            <div className="relative z-10 w-7 h-4 md:w-8 md:h-5 bg-gray-500 rounded-sm shadow-inner mb-1" />
 
             {/* Flip Card Wrapper Button */}
             <button
               type="button"
               aria-label="Flip ID card"
               onClick={() => setFlipped((prev) => !prev)}
-              className="relative w-full max-w-[280px] -rotate-3 hover:rotate-0 transition-transform duration-500 [perspective:1200px] focus:outline-none cursor-pointer text-left"
+              className="relative w-full max-w-[260px] sm:max-w-[280px] -rotate-2 md:-rotate-3 hover:rotate-0 transition-transform duration-500 [perspective:1200px] focus:outline-none cursor-pointer text-left"
             >
               {/* Card Container that flips in 3D */}
               <div
@@ -250,25 +250,25 @@ export default function About() {
         </div>
 
         {/* ── RIGHT — heading + bio ─────────────────────────────────────── */}
-        <div className="flex-1 pt-4 md:pt-16" data-aos="fade-left">
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
+        <div className="flex-1 pt-2 md:pt-16 w-full" data-aos="fade-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-4 md:mb-6">
             {aboutContent.heading}
           </h2>
 
           <p
-            className="text-lg font-bold leading-relaxed text-red-50"
+            className="text-base sm:text-lg font-bold leading-relaxed text-red-50"
             dangerouslySetInnerHTML={{ __html: aboutContent.bio }}
           />
         </div>
       </div>
 
-      {/* ── Torn-paper white SVG divider along the bottom ────────────────── */}
+      {/* ── Torn-paper dark SVG divider along the bottom (transitions into TechnicalSkills #0a0a0a) ── */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="w-full h-16 md:h-24 fill-white"
+          className="w-full h-14 sm:h-16 md:h-24 fill-[#0a0a0a]"
           aria-hidden="true"
         >
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.62,189.5,99.8,242.79,81.82,282.88,63.6,321.39,56.44Z" />

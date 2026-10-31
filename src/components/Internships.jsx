@@ -82,7 +82,7 @@ export default function Internships() {
   return (
     <section
       id="experience"
-      className="bg-[#ff2a2a] pt-24 pb-32 px-6 md:px-12 relative overflow-hidden"
+      className="bg-[#ff2a2a] pt-20 pb-24 md:pt-24 md:pb-32 px-5 sm:px-6 md:px-12 relative overflow-hidden"
     >
       {/* ── Top torn-paper divider (transition from previous dark section) ── */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none pointer-events-none -translate-y-[1px] rotate-180">
@@ -90,7 +90,7 @@ export default function Internships() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="w-full h-12 md:h-20 fill-[#0a0a0a]"
+          className="w-full h-10 sm:h-12 md:h-20 fill-[#0a0a0a]"
           aria-hidden="true"
         >
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.62,189.5,99.8,242.79,81.82,282.88,63.6,321.39,56.44Z" />
@@ -109,8 +109,8 @@ export default function Internships() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* ── Section Header ─────────────────────────────────────────────── */}
-        <div data-aos="fade-up" className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight mb-4">
+        <div data-aos="fade-up" className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black uppercase tracking-tight mb-4">
             Work Experience
           </h2>
           <p className="text-red-100 text-base md:text-lg max-w-xl mx-auto font-medium">

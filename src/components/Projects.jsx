@@ -141,15 +141,15 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-[#0a0a0a] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px] pt-24 pb-32 px-6 md:px-12 relative overflow-hidden"
+      className="bg-[#0a0a0a] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px] pt-20 pb-24 md:pt-24 md:pb-32 px-5 sm:px-6 md:px-12 relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto relative z-10">
         {/* ── Section Header ─────────────────────────────────────────────── */}
-        <div data-aos="fade-up" className="text-center max-w-3xl mx-auto mb-16">
+        <div data-aos="fade-up" className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-[#ff2a2a] text-xs font-semibold uppercase tracking-widest mb-4">
             Featured Projects
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4">
             Work that speaks for itself
           </h2>
           <p className="text-white/50 text-base md:text-lg max-w-xl mx-auto">

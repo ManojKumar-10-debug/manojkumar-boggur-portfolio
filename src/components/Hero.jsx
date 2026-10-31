@@ -64,7 +64,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative w-full h-screen overflow-hidden bg-[#ff2a2a]">
+    <section id="home" className="relative w-full min-h-[100dvh] h-screen overflow-hidden bg-[#ff2a2a]">
 
       {/* ── Background video ─────────────────────────────────────────────── */}
       {/* object-contain keeps the full frame visible (never crops).         */}
@@ -79,8 +79,8 @@ export default function Hero() {
         <source src={heroVideo} type="video/mp4" />
       </video>
 
-      {/* ── Gradient readability overlay ─────────────────────────────────── */}
-      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-black/45 via-black/10 to-transparent" />
+      {/* ── Gradient readability overlay (vertical on mobile, horizontal on desktop) ── */}
+      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-[#ff2a2a] via-[#ff2a2a]/85 to-transparent md:bg-gradient-to-r md:from-black/45 md:via-black/10 md:to-transparent" />
 
       {/* ── Left floating social bar (desktop only) ──────────────────────── */}
       <div className="hidden lg:flex fixed left-6 top-1/2 -translate-y-1/2 z-50 flex-col gap-5 mix-blend-difference">
@@ -99,13 +99,13 @@ export default function Hero() {
       </div>
 
       {/* ── Main content container ───────────────────────────────────────── */}
-      <div className="absolute inset-0 z-20 max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-[8%] flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end">
+      <div className="absolute inset-0 z-20 max-w-7xl mx-auto px-5 sm:px-6 md:px-12 pt-20 pb-8 sm:pb-12 md:pb-[8%] flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end">
 
         {/* ── LEFT BLOCK ─────────────────────────────────────────────────── */}
         <div className="max-w-2xl">
 
           {/* Mobile-only inline social icons (above the title) */}
-          <div className="flex gap-4 mb-4 lg:hidden" data-aos="fade-up" data-aos-delay="100">
+          <div className="flex gap-4 mb-3 sm:mb-4 lg:hidden" data-aos="fade-up" data-aos-delay="100">
             {socialItems.map(({ href, Icon, label }) => (
               <a
                 key={label}
@@ -113,7 +113,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="text-white/60 hover:text-white hover:scale-125 transition-all duration-200"
+                className="text-white/75 hover:text-white hover:scale-125 transition-all duration-200"
               >
                 <Icon />
               </a>
@@ -122,7 +122,7 @@ export default function Hero() {
 
           {/* Heading */}
           <h1
-            className="text-white text-3xl md:text-5xl font-bold leading-tight mb-4"
+            className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-2 sm:mb-4"
             data-aos="fade-up"
           >
             {heroContent.greeting},
@@ -133,7 +133,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p
-            className="text-white text-sm md:text-lg font-semibold max-w-md mb-8 leading-relaxed"
+            className="text-white text-xs sm:text-sm md:text-lg font-medium sm:font-semibold max-w-md mb-5 sm:mb-8 leading-relaxed line-clamp-3 md:line-clamp-none text-white/95"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -142,14 +142,14 @@ export default function Hero() {
 
           {/* CTA buttons row */}
           <div
-            className="flex flex-wrap gap-3"
+            className="flex flex-wrap items-center gap-2.5 sm:gap-3"
             data-aos="fade-up"
             data-aos-delay="400"
           >
             {/* Primary — View My Work */}
             <a
               href={heroContent.ctaPrimary.href}
-              className="px-6 py-3 rounded-full bg-white text-black font-semibold transition-transform duration-200 hover:scale-105"
+              className="px-4 py-2.5 sm:px-6 sm:py-3 rounded-full bg-white text-black text-xs sm:text-sm md:text-base font-bold transition-transform duration-200 hover:scale-105 shadow-md"
             >
               {heroContent.ctaPrimary.text}
             </a>
@@ -157,7 +157,7 @@ export default function Hero() {
             {/* Secondary — Contact Me */}
             <a
               href={heroContent.ctaSecondary.href}
-              className="px-6 py-3 rounded-full bg-black/40 border border-white text-white font-semibold backdrop-blur-sm transition-all duration-200 hover:bg-black/60"
+              className="px-4 py-2.5 sm:px-6 sm:py-3 rounded-full bg-black/40 border border-white text-white text-xs sm:text-sm md:text-base font-bold backdrop-blur-sm transition-all duration-200 hover:bg-black/60"
             >
               {heroContent.ctaSecondary.text}
             </a>
@@ -167,10 +167,10 @@ export default function Hero() {
               <a
                 href={heroContent.ctaResume.href}
                 download
-                className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/50 text-white font-semibold transition-all duration-200 hover:bg-white/10"
+                className="flex items-center gap-1.5 sm:gap-2 px-4 py-2.5 sm:px-6 sm:py-3 rounded-full border border-white/50 text-white text-xs sm:text-sm md:text-base font-bold transition-all duration-200 hover:bg-white/10"
               >
                 {/* Download-document icon */}
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3M3 7V4a1 1 0 011-1h4l2 3h9a1 1 0 011 1v3" />
                 </svg>
                 {heroContent.ctaResume.text}
@@ -181,31 +181,31 @@ export default function Hero() {
 
         {/* ── RIGHT BLOCK — Play Reel control ──────────────────────────── */}
         <div
-          className="mt-8 md:mt-0 flex flex-col items-center gap-2"
+          className="mt-4 md:mt-0 flex flex-row md:flex-col items-center gap-3 md:gap-2"
           data-aos="zoom-in"
           data-aos-delay="600"
         >
           <button
             onClick={toggleVideo}
             aria-label={isPlaying ? 'Pause reel' : 'Play reel'}
-            className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-white/30 bg-black/20 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#ff2a2a] hover:shadow-[0_0_30px_rgba(255,42,42,0.6)]"
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-20 md:h-20 rounded-full border border-white/40 bg-black/30 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#ff2a2a] hover:shadow-[0_0_30px_rgba(255,42,42,0.6)] cursor-pointer"
           >
             {isPlaying ? (
               /* Pause icon */
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
               </svg>
             ) : (
               /* Play triangle — offset right to centre visually */
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-8 md:h-8 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5 md:w-8 md:h-8 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
             )}
           </button>
 
-          {/* Label below the button */}
-          <span className="text-white text-[10px] md:text-xs uppercase tracking-widest font-medium">
-            {isPlaying ? 'Pause' : 'Play Reel'}
+          {/* Label below/beside the button */}
+          <span className="text-white text-[11px] md:text-xs uppercase tracking-widest font-bold">
+            {isPlaying ? 'Pause Reel' : 'Play Reel'}
           </span>
         </div>
       </div>

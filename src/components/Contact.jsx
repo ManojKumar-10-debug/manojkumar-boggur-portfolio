@@ -91,12 +91,12 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="bg-[#0a0a0a] w-full min-h-screen relative overflow-hidden flex items-end pt-32 border-t border-gray-900"
+      className="bg-[#0a0a0a] w-full min-h-screen relative overflow-hidden flex items-end pt-20 md:pt-32 border-t border-gray-900"
     >
       {/* ── Background Giant Parallax Typography ───────────────────────── */}
       <motion.div
         style={{ y }}
-        className="absolute top-10 left-6 md:left-12 pointer-events-none z-0 select-none"
+        className="absolute top-10 left-4 md:left-12 pointer-events-none z-0 select-none"
       >
         <div
           className="text-[25vw] leading-[0.75] font-black uppercase tracking-tighter scale-y-[1.6] origin-top text-white/5"
@@ -109,7 +109,7 @@ export default function Contact() {
       {/* ── Foreground Red Contact Card ────────────────────────────────── */}
       <div
         data-aos="fade-up"
-        className="relative z-10 ml-auto bg-[#ff2a2a] w-full md:w-[85%] lg:w-[75%] p-8 md:p-16 rounded-tl-[3rem] shadow-2xl"
+        className="relative z-10 ml-auto bg-[#ff2a2a] w-full md:w-[85%] lg:w-[75%] p-6 sm:p-8 md:p-16 rounded-tl-[2rem] sm:rounded-tl-[2.5rem] md:rounded-tl-[3rem] shadow-2xl"
       >
         {/* Top Header Row */}
         <div className="flex items-center justify-between gap-4 mb-10 pb-6 border-b border-white/20">
