@@ -2,7 +2,7 @@
 
 A high-performance, single-page developer portfolio showcasing full-stack web applications, RESTful microservices, and modern UI engineering.
 
-**Live site:** [https://YOUR-SITE-URL/](https://YOUR-SITE-URL/)
+**Live site:** [https://my-portfolio-xi-taupe.vercel.app/](https://my-portfolio-xi-taupe.vercel.app/)
 
 Built during the placement training program at [TAP Academy](https://thetapacademy.com/) (full-stack development, AI and augmented reality training).
 
@@ -22,8 +22,8 @@ Built during the placement training program at [TAP Academy](https://thetapacade
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/ManojKumar-10-debug/my-portfolio.git
-cd my-portfolio
+git clone https://github.com/ManojKumar-10-debug/manojkumar-boggur-portfolio.git
+cd manojkumar-boggur-portfolio
 npm install
 ```
 
