@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import TechnicalSkills from './components/TechnicalSkills';
 import Projects from './components/Projects';
+import Internships from './components/Internships';
 import Footer from './components/Footer';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <About />
         <TechnicalSkills />
         <Projects />
+        <Internships />
         {/* Further sections will be added here in later steps */}
       </main>
 
