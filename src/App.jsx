@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import TechnicalSkills from './components/TechnicalSkills';
 import Footer from './components/Footer';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <TechnicalSkills />
         {/* Further sections will be added here in later steps */}
       </main>
 
