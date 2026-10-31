@@ -1,4 +1,4 @@
-// App.jsx — root component; sections are composed here in order
+// App.jsx — root component; sections are composed in strict chronological order
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,23 +8,46 @@ import Internships from './components/Internships';
 import Leadership from './components/Leadership';
 import SoftSkills from './components/SoftSkills';
 import Footer from './components/Footer';
+import { internshipsList, leadershipList } from './data/portfolioData';
 
 function App() {
   return (
     <>
+      {/* 1. Preloader (not created yet) */}
+
+      {/* 2. Navbar */}
       <Navbar />
 
       <main>
+        {/* 3. Hero */}
         <Hero />
+
+        {/* 4. About */}
         <About />
+
+        {/* 5. IntroVideo (not created yet) */}
+
+        {/* 6. TechnicalSkills */}
         <TechnicalSkills />
+
+        {/* 7. Services (not created yet) */}
+
+        {/* 8. Projects */}
         <Projects />
-        <Internships />
-        <Leadership />
+
+        {/* 9. Internships (rendered only if array is non-empty) */}
+        {internshipsList && internshipsList.length > 0 && <Internships />}
+
+        {/* 10. Leadership (rendered only if array is non-empty) */}
+        {leadershipList && leadershipList.length > 0 && <Leadership />}
+
+        {/* 11. SoftSkills */}
         <SoftSkills />
-        {/* Further sections will be added here in later steps */}
+
+        {/* 12. Contact (not created yet) */}
       </main>
 
+      {/* 13. Footer */}
       <Footer />
     </>
   );
