@@ -1,4 +1,5 @@
 // App.jsx — root component; sections are composed in strict chronological order
+import SplashCursor from './components/SplashCursor';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -16,6 +17,15 @@ import { internshipsList, leadershipList } from './data/portfolioData';
 function App() {
   return (
     <>
+      {/* Fluid splash cursor trail (pointer-events: none, z-index: 50) */}
+      <SplashCursor
+        VELOCITY_DISSIPATION={3}
+        SPLAT_FORCE={3500}
+        COLOR_UPDATE_SPEED={18}
+        COLOR="#ffffff"
+        RAINBOW_MODE={false}
+      />
+
       {/* 1. Preloader */}
       <Preloader />
 
