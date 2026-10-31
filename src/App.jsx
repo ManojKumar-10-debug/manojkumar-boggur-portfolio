@@ -6,6 +6,7 @@ import TechnicalSkills from './components/TechnicalSkills';
 import Projects from './components/Projects';
 import Internships from './components/Internships';
 import Leadership from './components/Leadership';
+import SoftSkills from './components/SoftSkills';
 import Footer from './components/Footer';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Projects />
         <Internships />
         <Leadership />
+        <SoftSkills />
         {/* Further sections will be added here in later steps */}
       </main>
 

@@ -141,3 +141,4 @@ export default function Leadership() {
     </section>
   );
 }
+
