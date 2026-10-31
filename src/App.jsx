@@ -1,4 +1,5 @@
 // App.jsx — root component; sections are composed in strict chronological order
+import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,7 +14,8 @@ import { internshipsList, leadershipList } from './data/portfolioData';
 function App() {
   return (
     <>
-      {/* 1. Preloader (not created yet) */}
+      {/* 1. Preloader */}
+      <Preloader />
 
       {/* 2. Navbar */}
       <Navbar />
